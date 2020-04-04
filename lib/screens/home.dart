@@ -6,7 +6,6 @@ import 'dart:convert';
 import 'package:convert/convert.dart';
 import 'package:appmini/screens/iot.dart';
 
-
 class Home extends StatefulWidget{
   @override
   _HomeState createState()=> _HomeState();
@@ -113,12 +112,6 @@ Widget passText(){
     );
 }
 
-generateMd5(String data) {
-    var content = new Utf8Encoder().convert(data);
-    var md5 = crypto.md5;
-    var digest = md5.convert(content);
-    return hex.encode(digest.bytes);
-}
 
 
 Widget buttonlogin(){
@@ -137,7 +130,7 @@ Widget buttonlogin(){
             fontWeight: FontWeight.bold,
             fontFamily: 'Righteous-Regular'
         ),),
-        onPressed: (){if(generateMd5(mypass.text)==pass&&myemail.text==user){
+        onPressed: (){
             var route = MaterialPageRoute(
                 builder: (BuildContext context) => Iotlogin(
                     // valueFromRigisPage: myemail.text,
@@ -145,7 +138,7 @@ Widget buttonlogin(){
                 )
             );
             Navigator.of(context).push(route);
-        }editDatabase();},
+        }
     ),
     );
 }
@@ -168,7 +161,6 @@ Widget blocklogin(){
         ),
     );
 }
-
 
 
 @override
