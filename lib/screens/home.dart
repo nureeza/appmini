@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:appmini/screens/iotlogin.dart';
-import 'package:crypto/crypto.dart' as crypto;
-import 'dart:convert';
-import 'package:convert/convert.dart';
 import 'package:appmini/screens/iot.dart';
 
 class Home extends StatefulWidget{
@@ -180,3 +177,4 @@ Widget build(BuildContext context){
 }
 
 }
+
